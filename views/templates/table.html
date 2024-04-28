@@ -1,0 +1,99 @@
+{{define "Table"}}
+
+<!-- 
+<button type="button" class="mb-xs mt-xs mr-xs btn btn-default">Default</button>
+
+<button type="button" class="mb-xs mt-xs mr-xs btn btn-primary">Primary</button>
+
+<button type="button" class="mb-xs mt-xs mr-xs btn btn-success">Success</button>
+
+<button type="button" class="mb-xs mt-xs mr-xs btn btn-info">Info</button>
+
+<button type="button" class="mb-xs mt-xs mr-xs btn btn-warning">Warning</button>
+
+<button type="button" class="mb-xs mt-xs mr-xs btn btn-danger">Danger</button> -->
+
+<section class="panel">
+    <header class="panel-heading">
+        <div class="panel-actions">
+            <!-- <a href="#" class="fa fa-caret-down"></a>
+            <a href="#" class="fa fa-times"></a> -->
+        </div>
+
+
+        <h2 class="panel-title">Talyplar</h2>
+
+        <a href="/new-add"><button type="button" class="mb-xs mt-xs mr-xs btn btn-primary">Goş</button></a>
+        <a href="/excel"><button type="button" class="mb-xs mt-xs mr-xs btn btn-success">Excel</button></a>
+
+    </header>
+    <div class="panel-body">
+        <table class="table table-bordered table-striped mb-none" id="datatable-default">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Familiýasy</th>
+                    <th>Ady</th>
+                    <th>Atasynyň ady</th>
+                    <th>Doglan senesi</th>
+                    <th>Salgysy</th>
+                    <th>Işleýän/okaýan ýeri, wezipesi</th>
+                    <th>Telefon belgisi</th>
+                    <th>ID Number</th>
+                    <th>EPC Number</th>
+                    <th>Fotosuraty</th>
+                    <th>Poz</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr class="gradeX">
+                    <td>123Trident</td>
+                    <td>123Trident</td>
+                    <td>123Trident</td>
+                    <td>123Trident</td>
+                    <td>123Trident</td>
+                    <td>123Trident</td>
+                    <td>123Trident</td>
+                    <td>Internet
+                         Explorer 4.0</td>
+                    <td>Win 95+</td>
+                    <td class="center">4</td>
+                    <td class="center">X</td>
+                </tr> -->
+                <!-- <tr class="gradeC">
+                    <td>Trident123</td>
+                    <td>Internet
+                         Explorer 5.0</td>
+                    <td>Win 95+</td>
+                    <td class="center">5</td>
+                    <td class="center">C</td>
+                </tr> -->
+                {{range $index,$value:=.}}
+                <tr class="gradeA">
+                    <td>{{$index}}</td>
+                    <td>{{$value.LastName}}</td>
+                    <td>{{$value.FirstName}}</td>
+                    <td>{{$value.MidleName}}</td>
+                    <td class="center">{{$value.Birthday}}</td>
+                    <td>{{$value.Address}}</td>
+                    <td>{{$value.WorkAddress}}</td>
+                    <td>{{$value.Phone}}</td>
+                    <td>{{$value.IDNumber}}</td>
+                    <td>{{$value.EPCNumber}}</td>
+                    <td><img width="80px" src="/{{$value.Photo}}" alt=""></td>
+                    <td> <a href="/delete/{{$value.ID}}"><i class="fa fa-trash-o"></i></a></td>
+                </tr>
+                {{end}}
+                <!-- <tr class="gradeU">
+                    <td>Other browsers</td>
+                    <td>All others</td>
+                    <td>-</td>
+                    <td class="center">-</td>
+                    <td class="center">U</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+{{end}}

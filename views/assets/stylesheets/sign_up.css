@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #111;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .input-field {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .btn {
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #00adb5;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #007d8c;
+  }
+  
+  .bottom-text {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  .bottom-text a {
+    color: #00adb5;
+    text-decoration: none;
+  }
+  
+  .bottom-text a:hover {
+    text-decoration: underline;
+  }
+  

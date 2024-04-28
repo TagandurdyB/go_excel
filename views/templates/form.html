@@ -1,0 +1,116 @@
+{{define "Form"}}
+<div class="col-sm-3"></div>
+<div class="col-md-6" style="align-self: center;">
+    <form id="selects-form" action="/add" method="post" class="form-horizontal" enctype="multipart/form-data">
+        <section class="panel">
+            <header class="panel-heading">
+
+                <!-- <div class="panel-actions">
+              <a href="#" class="fa fa-caret-down"></a>
+              <a href="#" class="fa fa-times"></a>
+          </div> -->
+
+                <h2 class="panel-title">Talyp goş</h2>
+                <p class="panel-subtitle">
+                    Maglimatlary giriziň.
+                </p>
+            </header>
+
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Familiýasy<span class="required">*</span></label>
+                    <div class="col-sm-9">
+                        <input type="text" name="last_name" class="form-control" placeholder="" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Ady<span class="required">*</span></label>
+                    <div class="col-sm-9">
+                        <input type="text" name="first_name" class="form-control" placeholder="" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Atasynyň ady</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="midle_name" class="form-control" placeholder="" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Doglan senesi</label>
+                    <div class="col-md-9">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                            </span>
+                            <input name="birth_day" type="text" data-plugin-datepicker class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Salgysy</label>
+                    <div class="col-sm-9">
+                        <textarea name="address" rows="5" class="form-control"
+                            placeholder="Doly salgyny giriziň..."></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Işleýän/okaýan ýeri, wezipesi</label>
+                    <div class="col-sm-9">
+                        <textarea name="work_address" rows="5" class="form-control"
+                            placeholder="Doly maglumat giriziň..."></textarea>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Phone</label>
+                    <div class="col-md-6 control-label">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-phone"></i>
+                            </span>
+                            <input id="phone" data-plugin-masked-input data-input-mask="+999 99-999999" name="phone"
+                                placeholder="+999 ##-######" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">ID Number</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="id_number" class="form-control" placeholder="" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">EPC Number</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="epc_number" class="form-control" placeholder="" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Fotosuraty</label>
+                    <div class="col-sm-9">
+                        <input type="file" name="photo" class="form-control" />
+                    </div>
+                </div>
+
+
+            </div>
+            <footer class="panel-footer">
+                <div class="row">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button class="btn btn-primary">Goş</button>
+                        <button type="reset" class="btn btn-default">Arassala</button>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </form>
+</div>
+{{end}}
